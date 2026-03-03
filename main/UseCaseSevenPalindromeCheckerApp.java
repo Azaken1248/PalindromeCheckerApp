@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
 public class UseCaseSevenPalindromeCheckerApp {
 
 	/**
-	 * Application entry point for UC6
+	 * Application entry point for UC7
 	 * 
 	 * @param args Command-line arguments
 	 */
