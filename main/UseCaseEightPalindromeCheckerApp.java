@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
  */
 public class UseCaseEightPalindromeCheckerApp {
 	/**
-	 * Application entry point for UC6
+	 * Application entry point for UC8
 	 * 
 	 * @param args Command-line arguments
 	 */
