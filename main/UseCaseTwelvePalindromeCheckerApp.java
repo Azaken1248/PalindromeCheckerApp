@@ -34,7 +34,7 @@ import com.seveneleven.palindromecheckerapp.strategies.StackStrategy;
  */
 public class UseCaseTwelvePalindromeCheckerApp {
 	/**
-	 * Application entry point for UC7
+	 * Application entry point for UC12
 	 * 
 	 * @param args Command-line arguments
 	 */
