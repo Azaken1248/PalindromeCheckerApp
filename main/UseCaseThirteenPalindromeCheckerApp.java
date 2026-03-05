@@ -8,33 +8,32 @@ import com.seveneleven.palindromecheckerapp.strategies.StackStrategy;
 
 /**
  * =================================================================
- * MAIN CLASS - UseCaseTwelvePalindromeCheckerApp
+ * MAIN CLASS - UseCaseThirteenPalindromeCheckerApp
  * =================================================================
  * 
- * Use Case 12: Strategy Pattern for Palindrome Algorithms
+ * Use Case 13: Performance Comparision
  * 
  * Description:
- * This class demonstrates how different palindrome
- * validation algorithms can be selected dynamicallly
- * at runtimee using the Strategy Design pattern
+ * This class measures abd compares the execution
+ * performance of palindrome validation algorithms.
  * 
  * At this stage, the application:
- * - Defines a common PalindromeStrategy interface
- * - Implements a concrete stack based strategy
- * - Injects the strategy at runtime
- * - Executes the selected algorithm
+ * - Uses a palindrome strategy implementation
+ * - Captures execution start and end time
+ * - Calculates total execution duration
+ * - Displays benchmarking results
  * 
- * No performance comparision is done in this use case.
- * The focus is purely on algorithm interchangeability
+ * This use case focuses purely on performance
+ * measurement and algorithm comparision.
  * 
- * The goal is to teach extensible algorithm design
+ * The goal is to introduce benchmarking concepts
  * 
  * @author Developer
- * @version 12.0
+ * @version 13.0
  */
-public class UseCaseTwelvePalindromeCheckerApp {
+public class UseCaseThirteenPalindromeCheckerApp {
 	/**
-	 * Application entry point for UC7
+	 * Application entry point for UC13
 	 * 
 	 * @param args Command-line arguments
 	 */
@@ -63,10 +62,16 @@ public class UseCaseTwelvePalindromeCheckerApp {
 					String input = scanner.nextLine();
 					
 					strategy = new StackStrategy();
+					
+					long start = System.nanoTime();
 					isPalindrome = strategy.check(input);
+					long end = System.nanoTime();
+					
+					
 					
 					System.out.println("Input : " + input);
 					System.out.println("Is Palindrome? : " + isPalindrome);
+					System.out.println("Execution Time: " + (end - start) + "ns");
 					yield true;
 				}
 				case "2" -> {
@@ -75,10 +80,14 @@ public class UseCaseTwelvePalindromeCheckerApp {
 					String input = scanner.nextLine();
 					
 					strategy = new DequeStrategy();
+					
+					long start = System.nanoTime();
 					isPalindrome = strategy.check(input);
+					long end = System.nanoTime();
 					
 					System.out.println("Input : " + input);
 					System.out.println("Is Palindrome? : " + isPalindrome);
+					System.out.println("Execution Time: " + (end - start) + "ns");
 					yield true;
 				}
 				case "0" -> {
